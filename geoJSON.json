@@ -1,0 +1,104 @@
+clioGeoData=
+  { "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [5.718348 , 45.182979]
+          },
+          "properties": {
+            "timestamp": "12:01:01",
+            "consumption": "4.2"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [5.728348 , 45.182979]
+          },
+          "properties": {
+            "timestamp": "12:02:01",
+            "consumption": "4.2"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [5.738348 , 45.182979]
+          },
+          "properties": {
+            "timestamp": "12:03:01",
+            "consumption": "4.2"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [5.748348 , 45.182979]
+          },
+          "properties": {
+            "timestamp": "12:04:01",
+            "consumption": "4.2"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [5.748348 , 45.192979]
+          },
+          "properties": {
+            "timestamp": "12:05:01",
+            "consumption": "4.2"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [5.748348 , 45.202979]
+          },
+          "properties": {
+            "timestamp": "12:06:01",
+            "consumption": "4.2"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [5.748348 , 45.212979]
+          },
+          "properties": {
+            "timestamp": "12:07:01",
+            "consumption": "4.2"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [5.748348 , 45.222979]
+          },
+          "properties": {
+            "timestamp": "12:08:01",
+            "consumption": "4.2"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [5.758348 , 45.232979]
+          },
+          "properties": {
+            "timestamp": "12:09:01",
+            "consumption": "4.2"
+          }
+        },
+     ]
+  }
