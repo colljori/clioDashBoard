@@ -17,8 +17,6 @@ function GetMap()
   });
   trackLayer = new Microsoft.Maps.Layer('#myTrackLayer');
   map.layers.insert(trackLayer);
-  GetGeoData();
-  PrintGeoData();
 }
 
 
@@ -66,9 +64,11 @@ function PrintGeoData(start,stop) {
   var stopIndex   = stop  * dataLen;
 
   trackLayer.clear();
+
   for (var i = startIndex + 1 ; i < stopIndex; i++) {
     var coords = [geoData[i-1].getLocation(),geoData[i].getLocation()];
-    var color = getColorForPercentage(50/100,percentColorsForConsumtion);
+    var meanFuelCons = (geoData[i-1].metadata.consumption + geoData[i].metadata.consumption) /2;
+    var color = getColorForPercentage(meanFuelCons/100,percentColorsForConsumtion);
     var line = new Microsoft.Maps.Polyline(coords, {
       strokeColor: color,
       strokeThickness: 3,
@@ -93,7 +93,17 @@ $( function() {
     range: true,
     min: 0,
     max: 100,
-    values: [ 0, 100 ],
+    values: [ 0, 0 ],
+    start: function( event, ui ) {
+      $( "#intervalRangeSelector" ).fadeTo(50, 1, function() {
+        // Animation complete.
+      });
+    },
+    stop: function( event, ui ) {
+      $( "#intervalRangeSelector" ).fadeTo(2000, 0.4, function() {
+        // Animation complete.
+      });
+    },
     slide: function( event, ui ) {
       var start = $( "#intervalRangeSelector" ).slider( "values", 0 );
       var stop  = $( "#intervalRangeSelector" ).slider( "values", 1 );
@@ -101,6 +111,9 @@ $( function() {
     }
   });
 });
+
+
+
 
 
 //////////////// COLOR GRADIENT IN FONCITON OF PARAM ///////////////////////////
@@ -128,4 +141,14 @@ var getColorForPercentage = function(pct,percentColors) {
     };
     return 'rgb(' + [color.r, color.g, color.b].join(',') + ')';
     // or output as hex if preferred
+}
+
+
+///////////////////////// SIDE BAR /////////////////////////////////////////////
+function openNav() {
+    document.getElementById("frontPageSidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("frontPageSidenav").style.width = "0";
 }

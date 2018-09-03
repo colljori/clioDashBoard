@@ -3,24 +3,33 @@
   <head>
       <title>Clio dashboard</title>
       <meta charset="utf-8" />
-      <link rel="stylesheet" href="main.css" type="text/css">
-      <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <link rel="stylesheet" href="stylesheet.css" type="text/css">
+      <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
       <script
         src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous">
       </script>
       <script
-        src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+        src="jquery-ui-1.12.1.custom/jquery-ui.js">
       </script>
   </head>
   <body>
-    <!-- Affichage de la carte bing -->
+    <!--Side panel -->
+    <div id="frontPageSidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+      <div class="sideavopenbtn"
+      onclick="openNav()">&#9776;</div>
+    <!-- carte bing -->
     <div id="myMap"></div><br/>
+    <!-- selectionneur d'interval temporel -->
     <div id="intervalRangeSelector"></div><br/>
-    <button class="button" id="swap" onclick="ToggleTracking()" data-text-swap="Stop Tracking" data-text-original="Start Tracking">Start Tracking</button><br/>
-
-      <!-- Reference to the Bing Maps SDK -->
+    <!-- Reference to the Bing Maps SDK -->
       <script type='text/javascript'
               src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AgiqjJUh-xZnStCHqhJAPMCp2FjGaKTIo9j2RxApXkaSJgkvDKbWtaUUd2mCKfNC'
               async defer>

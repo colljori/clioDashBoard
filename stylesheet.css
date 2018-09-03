@@ -1,0 +1,111 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ BING MAP ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#myMap {
+    position: absolute;
+    margin: 0px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#intervalRangeSelector
+{
+  opacity: 0.4;
+  position: relative;
+  margin-top: 87vh;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~ USER BUTTON ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.button {
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~ SIDENAV ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    padding: 8px 8px 8px 8px;
+    position: absolute;
+    top: 0;
+    left: 0x;
+    font-size: 30px;
+}
+
+.sideavopenbtn {
+  position: absolute;
+  z-index: 2;
+  margin-top: 8px;
+  margin-left: 8px;
+  font-size:30px;
+  cursor:pointer;
+ }
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
